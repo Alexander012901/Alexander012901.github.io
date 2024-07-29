@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Smith Games </title>
+<style>
+header {
+ background-image: url(Imagenes/fondo%20header.png);
+    color: #000;
+    padding: 25px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+
+.sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidebar a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+    }
+
+    .openbtn:hover {
+        background-color: #444;
+    }
+
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+		color: #FFF;
+    }
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+	text-align: center;
+	cursor:default;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	text-align:right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F09; 
+}
+        
+body {
+  font-family: Arial;
+  background-color: #f0f0f0;
+  padding: 20px;
+  background-image: url(Imagenes/fondo2.jpg);
+}
+
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+.container img {
+  width: 100%;
+  height:auto;
+  transition: all .5s;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+  
+		}
+.container:hover img{
+  transform:scale(1.09);
+  margin-bottom: 20px;
+  
+		}
+
+.product {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 10px rgba(0, 0, 0, 0.1);
+  float: left;
+  width: 25%;
+  margin: 2%;
+  padding: 2%;
+  border: 2px solid #ccc;
+  text-align: justify; 
+  cursor:default;
+  line-height: 1.5;
+}
+
+.product h2 {
+  margin-top: 0;
+}
+
+.toggle {
+  display: none; 
+}
+
+.toggle-label {
+  background-color: #99F;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: block;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  display: none; 
+}
+
+.toggle:checked ~ .product-info {
+  display: block; 
+}
+
+</style>
+
+</head>
+
+ <header>
+        <div class="container">
+            <h1>Productos Gamers</h1>
+            
+        </div>
+    </header>
+
+<body>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="../index.html">Inicio</a>
+    <a href="Pagina Metodo.html">Controles Gamers</a>
+    <a href="Pagina 2 Alberto.html">Pc Gamers</a>
+</div>
+
+<div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button> 
+    <h2>Controles Gamers</h2>
+    <p>Los controles gamers son herramientas esenciales que potencian la experiencia de juego, ofreciendo precisión y respuesta inmediata que permiten a los jugadores sumergirse completamente en sus mundos virtuales. Con su diseño ergonómico y funciones personalizables, estos controles no solo mejoran el rendimiento en juegos de alta intensidad, sino que también proporcionan una comodidad duradera durante sesiones prolongadas. Gracias a su tecnología avanzada y construcción robusta, los controles gamers son aliados indispensables para aquellos que buscan alcanzar nuevos niveles de habilidad y disfrute en cada partida.</p>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+</script>
+
+    
+  <div class="container">
+  
+  <br />
+    
+  <div class="product">
+    <img src="Imagenes\control 6.png" alt="" />
+    <br />
+    <h2> Astro C40 TR </h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound').play()" id="toggle3" class="toggle">
+      <audio id="buttonSound" src="Imagenes/mortal-kombat-round-one.mp3"></audio>
+      <label for="toggle3" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+        <p> Destaca por su capacidad de intercambiar módulos, como joysticks y pads direcionales, para adaptarse a diferentes estilos de juego y preferencias personales. Con una construcción robusta y controles precisos, es ideal para juegos competitivos donde la precisión y la durabilidad son fundamentales. El Astro C40 TR ofrece una experiencia de juego personalizada y de alto rendimiento, perfecta para los jugadores exigentes que buscan un controlador versátil y adaptable.
+        </p>
+      </div>
+    </div>
+    
+     <div class="product">
+    <img src="Imagenes\control 2.png" alt="" />
+    <h2>PlayStation DualSense</h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound2').play()" id="toggle2" class="toggle">
+      <audio id="buttonSound2" src="Imagenes/mortal-kombat-round-two.mp3"></audio>
+      <label for="toggle2" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+        <p>Es el controlador de última generación diseñado para la PlayStation 5. Destaca por su innovadora retroalimentación háptica y gatillos adaptativos, que ofrecen una experiencia de juego inmersiva y sensorialmente rica. Su diseño ergonómico y la precisión de sus controles lo convierten en una opción popular entre los jugadores que buscan aprovechar al máximo las capacidadesde la PS5.
+        </p>
+      </div>
+    </div>
+    
+    <div class="product">
+    <img src="Imagenes\control 5.png" alt="" />
+    <h2> SteelSeries Nimbus+ </h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound3').play()" id="toggle4" class="toggle">
+      <audio id="buttonSound3" src="Imagenes/mortal-kombat-round-three.mp3"></audio>
+      <label for="toggle4" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+        <p>Es un excelente controlador diseñado para dispositivos de Apple, como iPhone, iPad, Apple TV y Mac. Con conectividad Bluetooth, ofrece una respuesta rápida y precisa para juegos móviles y de computadora. Su diseño ergonómico y batería de larga duración lo hacen ideal para sesiones prolongadas de juego, mientras que su compatibilidad versátil lo convierte en una opción preferida para los usuarios de la plataforma Apple que buscan una experiencia de juego inmersiva y cómoda.
+        </p>
+      </div>
+    </div>
+    
+    <div class="product">
+    <img src="Imagenes\control3.png" alt="" />
+    <h2> Nintendo Switch Pro Controller </h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound4').play()" id="toggle1" class="toggle">
+      <audio id="buttonSound4" src="Imagenes/mortal-kombat-four.mp3"></audio>
+      <label for="toggle1" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+        <p>Es el controlador premium diseñado para la consola Nintendo Switch. Ofrece un diseño ergonómico cómodo con botones bien ubicados y una batería de larga duración, ideal tanto para jugar en modo consola como en modo portátil. Su precisión y respuesta fluida lo hacen perfecto para una amplia variedad de juegos, convirtiéndolo en una opción preferida para los usuarios que buscan una experiencia de juego mejorada en la Nintendo Switch.
+        </p>
+      </div>
+    </div>
+    
+    <div class="product">
+    <img src= "Imagenes\control 4.png" alt="" />
+    <h2> Razer Wolverine Ultimate </h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound5').play()" id="toggle5" class="toggle">
+      <audio id="buttonSound5" src="Imagenes/mortal-kombat-round-five.mp3"></audio>
+      <label for="toggle5" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+        <p>
+        Es un controlador diseñado especialmente para Xbox y PC, conocido por su robustez y personalización avanzada. Ofrece botones adicionales intercambiables, gatillos ajustables y iluminación personalizable, todo ello diseñado para satisfacer las demandas de los juegos de acción intensa. Su construcción ergonómica y precisión en los controles lo hacen ideal para jugadores que buscan un rendimiento superior y una experiencia de juego personalizada.</p>
+      </div>
+    </div>
+    
+    <div class="product">
+    <img src="Imagenes\control 1.png" alt="" />
+    <h2> Xbox Elite Wireless Controller Series </h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound6').play()" id="toggle6" class="toggle">
+      <audio id="buttonSound6" src="Imagenes/mortal-kombat-round-six.mp3"></audio>
+      <label for="toggle6" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+        <p> Reconocido por su capacidad de personalización avanzada, que permite ajustar joysticks, gatillos y pads direcionales  según las preferencias del usuario. Construido con materiales premium y ofreciendo compatibilidad tanto con Xbox como con PC, es ideal para jugadores que buscan un control de alta calidad y versatilidad. Su diseño ergonómico y la posibilidad de remapear botones lo convierten en una opción preferida para aquellos que valoran el rendimiento y la personalización en sus sesiones de juego.
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</body>
+    
+</html>

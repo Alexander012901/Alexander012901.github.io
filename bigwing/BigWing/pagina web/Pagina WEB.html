@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Emerson Garcia</title>
+</head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const audioReadMore = document.getElementById("audioReadMore");
+            const audioReadLess = document.getElementById("audioReadLess");
+            const audioNav = document.getElementById("audioNav");
+
+            function playAudio(audioElement) {
+                if (audioElement) {
+                    audioElement.play().catch(function(error) {
+                        console.error('Error al reproducir el audio:', error);
+                    });
+                }
+            }
+
+            
+            window.toggleSpecs = function(element) {
+                const moreSpecs = element.previousElementSibling;
+                if (moreSpecs.style.maxHeight === "0px" || moreSpecs.style.maxHeight === "") {
+                    moreSpecs.style.maxHeight = moreSpecs.scrollHeight + "px";
+                    element.innerText = "Leer menos";
+                    playAudio(audioReadMore);
+                } else {
+                    moreSpecs.style.maxHeight = "0px";
+                    element.innerText = "Leer más";
+                    playAudio(audioReadLess);
+                }
+            }
+
+           
+            document.querySelectorAll('.header nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    playAudio(audioNav);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <audio id="audioReadMore" src="audio/y2mate.com - Mario Bros Comiendo Hongo para crecer   Mario Bros Eating Mushroom to grow  Sound Effect HD.mp3" preload="auto"></audio>
+    <audio id="audioReadLess" src="audio/mario-bros-die.mp3" preload="auto"></audio>
+    <audio id="audioNav" src="audio/super_mario_bros_3_moneda.mp3" preload="auto"></audio>
+
+    <div class="header">
+        <div class="container">
+            <h1>Productos Gamers</h1>
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="#section1">Monitores</a>
+                <a href="#section2">Mouses</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="section1" class="product-section">
+            <h2>Los 6 mejores Monitores gamers del mercado</h2>
+
+            <!-- Producto 1 -->
+            <div class="product">
+                <img src="imgenes/Monito-Photoroom.png" alt="Producto 1">
+                <h2>Monitor AOC para Videojuegos</h2>
+                <p>Disfruta de una experiencia de juego inmersiva con este monitor curvado AOC de 27 pulgadas, sin marco y con un tiempo de respuesta de 1 ms.</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Tamaño de la Pantalla:</strong> 27 pulgadas</li>
+                        <li><strong>Resolución:</strong> Full HD (1920 x 1080)</li>
+                        <li><strong>Panel:</strong> VA</li>
+                        <li><strong>Curvatura:</strong> 1500R</li>
+                        <li><strong>Tiempo de Respuesta:</strong> 1 ms (MPRT)</li>
+                        <li><strong>Frecuencia de Actualización:</strong> 144 Hz</li>
+                        <li><strong>Brillo:</strong> 250 cd/m²</li>
+                        <li><strong>Contraste Estático:</strong> 3000:1</li>
+                        <li><strong>Ángulos de Visión:</strong> 178° (H) / 178° (V)</li>
+                        <li><strong>Conectividad:</strong> 1x DisplayPort 1.2, 2x HDMI 1.4, 1x Salida de Auriculares (3.5 mm)</li>
+                        <li><strong>Tecnología de Sincronización:</strong> AMD FreeSync</li>
+                        <li><strong>Filtros:</strong> Filtro de luz azul, Tecnología anti-parpadeo</li>
+                        <li><strong>Montaje VESA:</strong> 100 x 100 mm</li>
+                        <li><strong>Ajustes de Ergonomía:</strong> Inclinación (-5° a 20°)</li>
+                        <li><strong>Consumo de Energía:</strong> Aprox. 25W (modo típico), <0.5W (modo de ahorro de energía)</li>
+                        <li><strong>Dimensiones con Soporte:</strong> 612.1 x 451.4 x 227.4 mm</li>
+                        <li><strong>Dimensiones sin Soporte:</strong> 612.1 x 367.3 x 74.5 mm</li>
+                        <li><strong>Peso:</strong> 4.4 kg</li>
+                        <li><strong>Precio:</strong>$300 USD</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+
+            
+            <div class="product">
+                <img src="imgenes/1-Photoroom.png" alt="LG 34GN850-B">
+                <h2>LG 34GN850-B</h2>
+                <p>Monitor ultraancho de 34 pulgadas con resolución WQHD y tasa de refresco de 144 Hz, perfecto para juegos y trabajo.</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Tamaño:</strong> 24.5 pulgadas</li>
+                        <li><strong>Resolución:</strong> 2560 x 1440 (QHD)</li>
+                        <li><strong>Tasa de refresco:</strong>360 Hz</li>
+                        <li><strong>Tiempo de respuesta:</strong>1 ms (GTG)</li>
+                        <li><strong>Tecnología:</strong> NVIDIA G-Sync</li>
+                        <li><strong>Compatibilidad:</strong> Tarjetas gráficas NVIDIA para G-Sync</li>
+                        <li><strong>Brillo:</strong> 400 nits (HDR10)</li>
+                        <li><strong>Relación de contraste:</strong> 1000:1</li>
+                        <li><strong>Cobertura de color:</strong> 98% DCI-P3</li>
+                        <li><strong>Conectividad:</strong> 1 x DisplayPort 1.4, 2 x HDMI 2.0, usb 3.0</li>
+                        <li><strong>Curvatura:</strong> No aplica</li>
+                        <li><strong>Otras características:</strong> Ajuste de altura, inclinación, pivotaje</li>
+                        <li><strong>Precio:</strong> Aproximadamente entre $900 y $1,200 USD</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+
+            
+            <div class="product">
+                <img src="imgenes/2-Photoroom.png" alt="Alienware AW3423DW">
+                <h2>Alienware AW3423DW</h2>
+                <p>Monitor OLED curvo de 34 pulgadas con tasa de refresco de 175 Hz y tiempo de respuesta ultrarrápido de 0.1 ms.</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Tamaño:</strong> 34 pulgadas</li>
+                        <li><strong>Resolución:</strong> 3440x1440</li>
+                        <li><strong>Tasa de refresco:</strong> 175 Hz</li>
+                        <li><strong>Tiempo de respuesta:</strong> 0.1 ms GtG</li>
+                        <li><strong>Tecnología:</strong> OLED IPS, HDR 400</li>
+                        <li><strong>Compatibilidad:</strong> NVIDIA G-Sync Ultimate</li>
+                        <li><strong>Brillo:</strong> 300 cd/m²</li>
+                        <li><strong>Cobertura de color:</strong> DCI-P3 99.3%</li>
+                        <li><strong>Conectividad:</strong> DisplayPort 1.4, 2 HDMI, 2 USB 3.2</li>
+                        <li><strong>Curvatura:</strong> 1800R</li>
+                        <li><strong>Otras características:</strong> Soporte de ajuste de altura, inclinación, giro</li>
+                        <li><strong>Precio:</strong> Aproximadamente $1,331.72 USD</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+
+           
+            <div class="product">
+                <img src="imgenes/3-Photoroom.png" alt="Xiaomi Mi Curved Gaming 34">
+                <h2>Xiaomi Mi Curved Gaming 34</h2>
+                <p>Monitor curvo de 34 pulgadas con resolución 3440x1440 y tasa de refresco de 144 Hz, ideal para juegos inmersivos.</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Tamaño:</strong> 34 pulgadas</li>
+                        <li><strong>Resolución:</strong> 3440x1440</li>
+                        <li><strong>Tasa de refresco:</strong> 144 Hz</li>
+                        <li><strong>Tiempo de respuesta:</strong> 4 ms</li>
+                        <li><strong>Tecnología:</strong> VA, AMD FreeSync</li>
+                        <li><strong>Conectividad:</strong> 1 DisplayPort, 2 HDMI, 2 USB</li>
+                        <li><strong>Curvatura:</strong> 1500R</li>
+                        <li><strong>Otras características:</strong> Marco ultrafino, base en forma de V</li>
+                        <li><strong>Precio:</strong> Aproximadamente $489 USD</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+
+            
+            <div class="product">
+                <img src="imgenes/4-Photoroom.png" alt="ASUS ROG Swift PG259QN">
+                <h2>ASUS ROG Swift PG259QN</h2>
+                <p>es un monitor de 24.5" con resolución QHD y tasa de refresco de 360 Hz, ideal para juegos de alta velocidad y fluidez.
+</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Tamaño:</strong> 27 pulgadas</li>
+                        <li><strong>Resolución:</strong> Full HD (1920x1080)</li>
+                        <li><strong>Tasa de refresco:</strong> 144 Hz</li>
+                        <li><strong>Tiempo de respuesta:</strong> 1 ms GtG</li>
+                        <li><strong>Tecnología:</strong> IPS, AMD FreeSync</li>
+                        <li><strong>Conectividad:</strong> 2 HDMI, 1 VGA, 1 DisplayPort</li>
+                        <li><strong>Otras características:</strong> Soporte ajustable, altavoces incorporados</li>
+                        <li><strong>Peso:</strong> 4.2 kg</li>
+                        <li><strong>Dimensiones:</strong> 60.5 x 50 x 18.4 cm</li>
+                        <li><strong>Precio:</strong> Aproximadamente $200 USD</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+
+           
+            <div class="product">
+                <img src="imgenes/5-Photoroom.png" alt="MSI Optix MAG322CQR">
+                <h2>MSI Optix MAG322CQR</h2>
+                <p>Monitor curvo de 32 pulgadas con resolución 2560x1440 y tasa de refresco de 165 Hz, con iluminación Mystic Light.</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Tamaño:</strong> 32 pulgadas</li>
+                        <li><strong>Resolución:</strong> 2560x1440</li>
+                        <li><strong>Tasa de refresco:</strong> 165 Hz</li>
+                        <li><strong>Tiempo de respuesta:</strong> 1 ms GtG</li>
+                        <li><strong>Tecnología:</strong> VA, Flicker Free</li>
+                        <li><strong>Brillo:</strong> 300 nits</li>
+                        <li><strong>Curvatura:</strong> 1500R</li>
+                        <li><strong>Otras características:</strong> Mystic Light (iluminación personalizable), ajuste automático de temperatura del color</li>
+                        <li><strong>Peso:</strong> 5.6 kg</li>
+                        <li><strong>Dimensiones:</strong> 61 x 56 x 27 cm</li>
+                        <li><strong>Precio:</strong> Aproximadamente $300 USD</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+        </div>
+
+        <div id="section2" class="product-section">
+            <h2>Los 6 mejores Mouses gamers del mercado</h2>
+
+           
+            <div class="product">
+                <img src="imgenes/11-Photoroom.png" alt="Logitech G Pro X Superlight">
+                <h2>Logitech G Pro X Superlight</h2>
+                <p>Ratón inalámbrico ultraligero para juegos con sensor HERO 25K y diseño ergonómico ambidiestro.</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Sensor:</strong> HERO 25K</li>
+                        <li><strong>DPI:</strong> Hasta 25,600</li>
+                        <li><strong>Tipo de conector:</strong> Inalámbrico (LIGHTSPEED)</li>
+                        <li><strong>Peso:</strong> Aproximadamente 63 gramos</li>
+                        <li><strong>Botones:</strong> 5 botones programables</li>
+                        <li><strong>RGB:</strong> No</li>
+                        <li><strong>Diseño:</strong> Ergonómico, ambidiestro</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+
+           
+            <div class="product">
+                <img src="imgenes/22-Photoroom.png" alt="Razer DeathAdder V2">
+                <h2>Razer DeathAdder V2</h2>
+                <p>Ratón ergonómico con sensor Razer Focus+ Optical Sensor y 8 botones programables.</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Sensor:</strong> Razer Focus+ Optical Sensor</li>
+                        <li><strong>DPI:</strong> Hasta 20,000</li>
+                        <li><strong>Tipo de conector:</strong> Cable (Speedflex)</li>
+                        <li><strong>Peso:</strong> Aproximadamente 82 gramos</li>
+                        <li><strong>Botones:</strong> 8 botones programables</li>
+                        <li><strong>RGB:</strong> Razer Chroma RGB</li>
+                        <li><strong>Diseño:</strong> Ergonómico, para diestros</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+
+            
+            <div class="product">
+                <img src="imgenes/33-Photoroom.png" alt="SteelSeries Rival 600">
+                <h2>SteelSeries Rival 600</h2>
+                <p>Ratón con sistema de doble sensor TrueMove3+ y pesos ajustables.</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Sensor:</strong> TrueMove3+ Dual Sensor System</li>
+                        <li><strong>DPI:</strong> Hasta 12,000</li>
+                        <li><strong>Tipo de conector:</strong> Cable (conexión USB)</li>
+                        <li><strong>Peso:</strong> Aproximadamente 96 gramos (ajustable con pesos adicionales)</li>
+                        <li><strong>Botones:</strong> 7 botones programables</li>
+                        <li><strong>RGB:</strong> PrismSync RGB</li>
+                        <li><strong>Diseño:</strong> Ergonómico, para diestros</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+
+           
+            <div class="product">
+                <img src="imgenes/44-Photoroom.png" alt="Corsair Dark Core RGB/SE">
+                <h2>Corsair Dark Core RGB/SE</h2>
+                <p>Ratón con sensor PixArt PMW3367 y opciones de conexión inalámbrica o por cable.</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Sensor:</strong> PixArt PMW3367</li>
+                        <li><strong>DPI:</strong> Hasta 16,000</li>
+                        <li><strong>Tipo de conector:</strong> Inalámbrico (Bluetooth y SLIPSTREAM) o cable (USB)</li>
+                        <li><strong>Peso:</strong> Aproximadamente 128 gramos</li>
+                        <li><strong>Botones:</strong> 9 botones programables</li>
+                        <li><strong>RGB:</strong> RGB personalizable</li>
+                        <li><strong>Diseño:</strong> Ergonómico, para diestros, con agarres laterales intercambiables</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+
+            
+            <div class="product">
+                <img src="imgenes/55-Photoroom.png" alt="Zowie EC2-B">
+                <h2>Zowie EC2-B</h2>
+                <p>Ratón con sensor Pixart 3310 y diseño ergonómico para diestros.</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Sensor:</strong> Pixart 3310</li>
+                        <li><strong>DPI:</strong> Ajustable hasta 3,200 (varios niveles)</li>
+                        <li><strong>Tipo de conector:</strong> Cable (conexión USB)</li>
+                        <li><strong>Peso:</strong> Aproximadamente 85 gramos</li>
+                        <li><strong>Botones:</strong> 5 botones (incluidos los botones de ajuste de DPI)</li>
+                        <li><strong>RGB:</strong> No</li>
+                        <li><strong>Diseño:</strong> Ergonómico, para diestros</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+
+           
+            <div class="product">
+                <img src="imgenes/66-Photoroom.png"alt="Razer Viper Ultimate">
+                <h2>Razer Viper Ultimate</h2>
+                <p>Ratón inalámbrico con sensor Razer Focus+ Optical Sensor y 8 botones programables.</p>
+                <div class="more-specs">
+                    <ul class="specs">
+                        <li><strong>Sensor:</strong> Razer Focus+ Optical Sensor</li>
+                        <li><strong>DPI:</strong> Hasta 20,000</li>
+                        <li><strong>Tipo de conector:</strong> Inalámbrico (HyperSpeed)</li>
+                        <li><strong>Peso:</strong> Aproximadamente 74 gramos</li>
+                        <li><strong>Botones:</strong> 8 botones programables</li>
+                        <li><strong>RGB:</strong> Razer Chroma RGB</li>
+                        <li><strong>Diseño:</strong> Ambidiestro, ergonómico</li>
+                    </ul>
+                </div>
+                <span class="read-more" onclick="toggleSpecs(this)">Leer más</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Smith Game</title>
+<style>
+header { 
+    background-image: url(Imagenes/fondo%20header.png);
+    color: #000;
+    padding: 25px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidebar a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+    }
+
+    .openbtn:hover {
+        background-color: #444;
+    }
+
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+		color:#FFF;
+    }
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+	text-align: center;
+	cursor:default;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	text-align:right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F09; 
+}
+body {
+  font-family: Arial;
+  background-color: #f0f0f0;
+  padding: 20px;
+  background-image:url(Imagenes/fondooo.jpg);
+}
+
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+.container img {
+  width: 100%;
+  height:auto;
+  transition: all .5s;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+		}
+.container:hover img{
+  transform:scale(1.09);
+  margin-bottom: 20px;
+		}
+
+.product {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  float: left;
+  width: 25%;
+  margin: 2%;
+  padding: 2%;
+  border: 2px solid #ccc;
+  text-align: justify; 
+  cursor:default;
+  line-height: 1.5;
+
+}
+
+.product h2 {
+  margin-top: 0;
+}
+
+.toggle {
+  display: none; 
+}
+
+.toggle-label {
+  background-color: #99F;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: block;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  display: none; 
+}
+
+.toggle:checked ~ .product-info {
+  display: block; 
+}
+	 
+</style>
+
+</head>
+<header>
+        <div class="container">
+            <h1>Productos Gamers</h1>
+        </div>
+    </header>
+<body>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="../index.html">Inicio</a>
+    <a href="Pagina Metodo.html">Controles Gamers</a>
+    <a href="Pagina 2 Alberto.html">Pc Gamers</a>
+</div>
+
+<div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>
+    <h2>Pc Gamers</h2>
+    <p> Los PC gamers representan la vanguardia del entretenimiento digital, ofreciendo una potencia y versatilidad incomparables que permiten a los usuarios explorar mundos virtuales con gráficos impresionantes y una fluidez sin igual. Equipados con componentes de última generación como tarjetas gráficas de alto rendimiento, procesadores rápidos y memoria RAM amplia, los PC gamers garantizan una experiencia de juego fluida y envolvente. Además, su capacidad de personalización permite a cada jugador adaptar su equipo según sus necesidades y preferencias, asegurando no solo un rendimiento óptimo, sino también un estilo único. Con opciones que van desde la realidad virtual hasta juegos en ultra alta definición, los PC gamers son la elección ideal para aquellos que buscan llevar su pasión por los videojuegos al siguiente nivel.</p>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+</script>
+
+    
+  <div class="container">
+  
+  <br />
+  
+  <div class="product">
+    <img src="Imagenes\pc2.jpg" alt="">
+    <h2> PcCom Ready Intel Core i5-12400F </h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound').play()" id="toggle3" class="toggle">
+      <audio id="buttonSound" src="Imagenes/mortal-kombat-round-one.mp3"></audio>
+      <label for="toggle3" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+        <p><strong>Procesador Intel Core:</strong> i5 12400F 2.5 GHz <br />
+               <strong>RAM:</strong> de 16 GB DDR4 2x8GB 3200 Mhz<br />
+               <strong>Tarjeta gráfica:</strong> RTX 3060 12GB GDDR6<br />
+               <strong>Placa base Gigabyte:</strong> B760M DS3H DDR4<br />
+               <strong>SSD:</strong> de 1 TB<br />
+               <strong>Torre MSI MAG Forge:</strong> 100M con lateral transparente<br />
+               <strong>Refrigeración:</strong> Tempest Cooler 4Pipes 120mm RGB Ventilador CPU Negro<br />
+               <strong>Fuente de alimentación:</strong> Corsair CV Series CV650 650W 80 Plus Bronze<br />
+               <strong>Sistema operativo:</strong> FreeDOS<br />
+               </p>
+      </div>
+    </div>
+    
+      <div class="product">
+       <img src="Imagenes\pc3.png" alt="">
+      <h2> PcCom Imperial Intel Core i5 </h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound6').play()" id="toggle2" class="toggle">
+      <audio id="buttonSound6" src="Imagenes/mortal-kombat-round-two.mp3"></audio>
+      <label for="toggle2" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+            <p><strong>Procesador Intel Core i5:</strong> 13600KF 3.5 GHz Box <br />
+               <strong>RAM:</strong> de 32 GB <br />
+               <strong>Tarjeta gráfica:</strong> MSI GeForce RTX 4070 <br />
+               <strong>Placa base:</strong> ASUS PRIME Z790-P WIFI <br />
+               <strong>SSD:</strong> de 1 TB <br />
+               <strong>Torre:</strong> Forgeon Arcanite ARGB Mesh Torre ATX Blanca <br />
+               <strong>Fuente de alimentación:</strong> Forgeon Bolt PSU 750W 80+ Gold Full Modular <br />
+               <strong>Sistema operativo:</strong> FreeDOS <br />
+            </p>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="Imagenes\pc 4.jpg" alt="">
+      <h2> Deep Gaming Nostromo Pro Intel Core i9 </h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound2').play()" id="toggle4" class="toggle">
+      <audio id="buttonSound2" src="Imagenes/mortal-kombat-round-three.mp3"></audio>
+      <label for="toggle4" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+            <p>
+            <strong>Procesador Intel Core i9:</strong> 11900F con frecuencia turbo de 5.2 Ghz <br />
+            <strong>RAM:</strong> de 64 GB DDR4, 3200 MHz <br />
+            <strong>Tarjeta gráfica:</strong> Nvidia RTX 3060 de 12GB GDDR6 <br />
+            <strong>SD:</strong> de 1 TB <br />
+            <strong>Torre:</strong> DeepGaming con iluminación ARGB con panel lateral transparente <br />
+            <strong>Refrigeración líquida:</strong> DeepRunny 120mm con iluminación LED <br />
+            <strong>Fuente de alimentación:</strong> DeepPower BR-800 800W 80 Plus Bronze <br />
+            <strong>Sistema operativo:</strong> FreeDOS <br />
+            </p>
+      </div>
+    </div>
+    
+    <div class="product">
+    <img src= "Imagenes\pc 5.png" alt="" >
+    <h2> PcCom iCUE Intel Core i7 </h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound3').play()" id="toggle1" class="toggle">
+      <audio id="buttonSound3" src="Imagenes/mortal-kombat-four.mp3"></audio>
+      <label for="toggle1" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+             <p>
+             <strong>Procesador Intel Core i7:</strong> 13700KF 3.4 GHz Box<br />
+            <strong>RAM:</strong> de Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32 GB<br />
+            <strong>Tarjeta gráfica:</strong> Zotac Gaming GeForce RTX 4080 TRINITY OC 16GB GDDR6X DLSS3<br />
+            <strong>Placa base:</strong> ASUS ROG STRIX Z790-E GAMING WIFI<br />
+            <strong>SSD:</strong> de 2 TB<br />
+            <strong>Torre Corsair:</strong> iCUE 7000X RGB con lateral transparente<br />
+            <strong>Ventilador:</strong> Corsair iCUE LINK H150i RGB Kit AIO de Refrigeración Líquida<br />
+            <strong>Fuente de alimentación:</strong> Corsair RMx 850W 80 Plus Gold Modular<br />
+            <strong>Sistema operativo:</strong> Windows 11 Home 64 Bits instalado y configurado <br />
+             </p>
+      </div>
+    </div>
+    
+    <div class="product">
+    <img src="Imagenes\pc1.jpg" alt= "">
+    <h2> Aures Gaming Minotaur A46G AMD Ryzen 5 </h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound4').play()" id="toggle5" class="toggle">
+      <audio id="buttonSound4" src="Imagenes/mortal-kombat-round-five.mp3"></audio>
+      <label for="toggle5" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+            <p> <strong>Procesador:</strong> AMD Ryzen 5 4600G.<br />
+            <strong>RAM:</strong> de 16 GB T-FORCE T1 DDR4-3200 Mhz. <br />
+            <strong>Tarjeta gráfica:</strong> AMD Radeon RX Vega 7. <br />
+            <strong>Placa base:</strong> MSI B450M A PRO y tarjeta Wifi. <br />
+            <strong>SSD:</strong> de 500 GB. <br />
+            <strong>Torre Sharkoon:</strong> TG4M. <br />
+            <strong>Fuente de alimentación:</strong> FSP 350W. <br />
+            <strong>Sistema operativo:</strong> FreeDOS <br />
+            </p>
+      </div>
+    </div>
+    
+    <div class="product">
+    <img src="Imagenes\pc 6.png" alt= "">
+    <h2> Gigabyte AORUS MODEL X </h2>
+      <input type="checkbox" onclick="document.getElementById('buttonSound5').play()" id="toggle6" class="toggle">
+      <audio id="buttonSound5" src="Imagenes/mortal-kombat-round-six.mp3"></audio>
+      <label for="toggle6" class="toggle-label">Mostrar información</label>
+      <div class="product-info">
+            <p>
+            <strong>Procesador:</strong> AMD Ryzen 9 5900X 3.7GHz. <br />
+            <strong>RAM:</strong> de 32 GB. <br />
+            <strong>Tarjeta gráfica:</strong> NVIDIA GeForce RTX 3080 10 GB. <br />
+            <strong>Placa base:</strong> AMD X570. <br />
+            <strong>SSD:</strong> de 2 TB. <br />
+            <strong>Torre:</strong> con Cooling Solution 360mm Liquid Cooler y lateral transparente. <br />
+            <strong>Fuente de alimentación:</strong> 850W 80 PLUS GOLD. <br />
+            <strong>Sistema operativo:</strong> FreeDOS. <br />
+            </p>
+      </div>
+    </div>
+    
+  </div>
+</body>
+    
+</html>
+
